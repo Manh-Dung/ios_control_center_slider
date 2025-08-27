@@ -1,5 +1,5 @@
 name: ios_control_center_slider
-description: "A new Flutter package project."
+description: "An iOS Control Center–style vertical slider widget for Flutter."
 version: 0.0.1
 homepage: https://github.com/Manh-Dung/ios_control_center_slider
 repository: https://github.com/Manh-Dung/ios_control_center_slider
