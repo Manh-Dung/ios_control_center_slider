@@ -1,0 +1,22 @@
+name: ios_control_center_slider
+description: "A new Flutter package project."
+version: 0.0.1
+homepage: https://github.com/Manh-Dung/ios_control_center_slider
+repository: https://github.com/Manh-Dung/ios_control_center_slider
+issue_tracker: https://github.com/Manh-Dung/ios_control_center_slider/issues
+topics: [ flutter, widget, utils ]
+
+environment:
+  sdk: ^3.8.1
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
