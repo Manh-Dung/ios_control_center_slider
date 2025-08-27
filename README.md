@@ -1,39 +1,99 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+## ios_control_center_slider
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+An iOS Control Center–style vertical slider for Flutter. It mimics the iOS volume/brightness control with a tall rounded track, animated fill, and a contextual icon at the bottom.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+![Preview](assets/image.png)
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+---
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- iOS Control Center–like appearance out of the box
+- Vertical interaction with smooth updates
+- Simple API: control via `currentValue` and `onChanged`
 
-## Getting started
+---
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## Installation
+
+Add the dependency in your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  ios_control_center_slider: ^0.0.1
+```
+
+Then run:
+
+```bash
+flutter pub get
+```
+
+---
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+import 'package:flutter/material.dart';
+import 'package:ios_control_center_slider/ios_control_center_slider.dart';
+
+class VolumeExample extends StatefulWidget {
+  const VolumeExample({super.key});
+
+  @override
+  State<VolumeExample> createState() => _VolumeExampleState();
+}
+
+class _VolumeExampleState extends State<VolumeExample> {
+  double volume = 5.0; // Range: 0.0..10.0
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey.shade200,
+      body: Center(
+        child: IosControlCenterSlider(
+          name: 'Volume',
+          currentValue: volume,
+          onChanged: (double value) {
+            setState(() => volume = value);
+          },
+        ),
+      ),
+    );
+  }
+}
 ```
 
-## Additional information
+---
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+## API
+
+```dart
+IosControlCenterSlider({
+  required double currentValue, // 0.0..10.0
+  required String name,
+  ValueChanged<double>? onChanged,
+})
+```
+
+- `currentValue`: Current value (0.0 = empty, 10.0 = full).
+- `onChanged`: Called whenever the slider value changes.
+- `name`: Logical control name (reserved for future UI usage).
+
+Notes:
+- The control renders vertically using a rotated `Slider` under the hood.
+- The bottom icon toggles between `volume_off` and `volume_up` based on value.
+
+---
+
+## Example app
+
+See the `/example` folder for a runnable sample.
+
+---
+
+## Contributing
+
+Issues and pull requests are welcome.
+Repository: https://github.com/Manh-Dung/ios_control_center_slider
