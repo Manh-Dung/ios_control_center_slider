@@ -27,6 +27,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Ios Control Center Slider Demo',
       theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),
       home: Scaffold(
+        backgroundColor: Colors.grey,
         body: Center(
           child: Column(
             children: [
