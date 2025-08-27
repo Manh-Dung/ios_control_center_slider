@@ -2,9 +2,9 @@
 
 An iOS Control Center–style vertical slider for Flutter. It mimics the iOS volume/brightness control with a tall rounded track, animated fill, and a contextual icon at the bottom.
 
-![Preview](assets/image.png)
+![Preview](doc/preview.png)
 
-![Demo](assets/video.gif)
+![Demo](doc/demo.gif)
 
 ---
 
