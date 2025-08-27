@@ -4,6 +4,8 @@ An iOS Control Center–style vertical slider for Flutter. It mimics the iOS vol
 
 ![Preview](assets/image.png)
 
+![Demo](assets/video.gif)
+
 ---
 
 ## Features
